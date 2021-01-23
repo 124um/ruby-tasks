@@ -10,6 +10,8 @@ class Message
 
   def initialize(body)
     @id = SecureRandom.uuid
-    self.body = body
+    self.body = Message.truncate(body)
   end
+
 end
+
